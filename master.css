@@ -1,0 +1,117 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 600px; 
+    height: 400px;  
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h2{
+    position: absolute;
+    top: 20px;
+    font-size: 2rem;
+    z-index: 1;
+}
+button {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 10px 23px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#yesBtn {
+    margin-left: -200px;
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button#noBtn {
+    transition: 0.2s;
+    background-color: #f44336;
+    color: #fff;
+    margin-right: -200px;
+
+}
+img {
+    width: 54%;
+    position: absolute;
+    transform: rotate(45deg) translateX(-200%);
+    transition: transform 0.5s, opacity 0.5s;
+    top: 50%;
+}
+
+img.open {
+    transform: rotate(45deg) translateX(-56%);
+    animation: fadeOut 5s ease forwards;
+}
+
+.tow {
+    transform: rotate(45deg) translateX(200%);
+}
+
+.tow.open {
+    transform: rotate(-29deg) translateX(67%);
+    animation: fadeOut 5s ease forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+img.angry {
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 37%;
+    opacity: 0;
+    transition: 0.5s;
+}
+img.angry.open{
+    animation: angr 0.1s infinite ease;
+opacity: 1;
+}
+@keyframes angr {
+    0%{
+        left: 50%;
+        top: 50%;
+    }
+    40%{
+        left: 48%;
+        top: 48%;
+    }
+    70%{
+        left: 52%;
+        top: 52%;
+    }
+    100%{
+        left: 50%;
+        top: 50%;
+    }
+}
+i {
+    color: #f01616;
+}
